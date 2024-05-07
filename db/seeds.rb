@@ -6,4 +6,16 @@
 #
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+# #   end
+
+# Course.destroy_all
+# User.destroy_all
+
+# john = User.create(email: "john@example.com", password: "123456")
+# doe = User.create(email: "doe@example.com", password: "123456")
+
+# p john
+# p doe
+# # Course.create!(subject: "Painting", user: user)
+
+# # Course.create!(subject: "Cupcake Design", user: user1)
