@@ -9,3 +9,10 @@
 #   end
 
 user1 = User.create!(email: 'test@email.com', password: '123456')
+user2 = User.create!(email: 'another_test@anotheremail.com', password: '123456')
+
+course1 = Course.create!(subject: 'Maths', user_id: user1.id)
+course2 = Course.create!(subject: 'Chemistry', user_id: user1.id)
+course3 = Course.create!(subject: 'English', user_id: user1.id)
+course4 = Course.create!(subject: 'Physics', user_id: user1.id)
+course5 = Course.create!(subject: 'Arabic', user_id: user1.id)
