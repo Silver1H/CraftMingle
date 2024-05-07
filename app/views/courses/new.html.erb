@@ -1,0 +1,10 @@
+<% provide(:title, 'New course') %>
+<div class="row">
+  <div class="new-course">
+    <%= form_for(:course, url: courses_path) do |f| %>
+      <%= f.label 'Course subject:' %>
+      <%= f.text_field :subject, class: "post-area form-control", autofocus: true %>
+      <%= f.submit "Save Course", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
