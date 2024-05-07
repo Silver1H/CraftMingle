@@ -1,11 +1,9 @@
 class CoursesController < ApplicationController
-  def new
-    @course = Course.new
+  def index
+    @courses = Course.all
   end
 
-  def create
-    current_user.courses.create!(subject: params['course']['subject'])
-
-    redirect_to root_url
+  def show
+    @course = Course.find(params[:id])
   end
 end

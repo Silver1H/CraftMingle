@@ -18,3 +18,17 @@ course2 = Course.create!(subject: 'Chemistry', user_id: user1.id)
 course3 = Course.create!(subject: 'English', user_id: user1.id)
 course4 = Course.create!(subject: 'Physics', user_id: user1.id)
 course5 = Course.create!(subject: 'Arabic', user_id: user1.id)
+# #   end
+
+# Course.destroy_all
+# User.destroy_all
+
+# john = User.create(email: "john@example.com", password: "123456")
+# doe = User.create(email: "doe@example.com", password: "123456")
+
+# p john
+# p doe
+# # Course.create!(subject: "Painting", user: user)
+
+# # Course.create!(subject: "Cupcake Design", user: user1)
+
