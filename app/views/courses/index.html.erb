@@ -15,6 +15,20 @@
   <li><%= link_to course.subject, course_path(course) %></li>
   <% end %>
 </ul>
+
+<% content_for :title, 'Courses' %>
+
+<div class="banner d-flex justify-content-center mt-5">
+  <h1>Courses</h1>
+</div>
+
+<div class="container mt-5">
+  <div class="cards-container">
+    <% @courses.each do |course|%>
+      <%= render 'partials/coursecards', course: course %>
+    <% end %>
+  </div>
+
 </div>
 
 <%# <div class="container mt-5">
