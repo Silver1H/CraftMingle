@@ -2,16 +2,18 @@
 <h1>You'are all BOOKED</h1>
 </div>
 
-<%# <div class="container mt-5">
+<div class="container mt-5">
 <ul>
   <% @bookings.each do |booking|%>
-  <%# <li><%= link_to booking, booking_path(params[booking_id]) %>
-  <%# </li> %>
-  <%# <% end %>
-<%# </ul>
-</div> %>
-<%#
+  <li><%= link_to booking, new_booking_path(@booking) %> </li>
+ <% end %>
+</div>
+
+<%= link_to booking, new_booking_path(@booking) %>
+
+
 <div class="container mt-5">
 <div type="button" class="btn btn-outline-primary">
 <p> <%= link_to ' back to Courses', courses_path %>
-<%# </p> %>
+</p>
+</div>

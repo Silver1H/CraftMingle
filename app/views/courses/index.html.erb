@@ -1,7 +1,7 @@
 <div class="banner">
   <div class="container">
     <div class="title">
-    <h1>Craft Mingle</h1>
+    <%# <h1>Craft Mingle</h1> %>
     </div>
     <h4>Bring you to the skills you <strong>want</strong> to the<strong> people</strong> who have it!</h4>
     <p>Change your life and learn a new skill today.</p>
@@ -10,11 +10,6 @@
 
 
 <div class="card">
-<ul>
-  <% @courses.each do |course|%>
-  <li><%= link_to course.subject, course_path(course) %></li>
-  <% end %>
-</ul>
 
 <% content_for :title, 'Courses' %>
 
@@ -23,7 +18,7 @@
 </div>
 
 <div class="container mt-5">
-  <div class="cards-container">
+  <div class="d-flex cards-container">
     <% @courses.each do |course|%>
       <%= render 'partials/coursecards', course: course %>
     <% end %>
