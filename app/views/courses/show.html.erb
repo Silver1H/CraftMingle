@@ -1,5 +1,14 @@
 <div class="card-category">
 <h1>Course</h1>
+
+<%= @course.subject %>
+
+<div class="container mt-5">
+<div type="button" class="btn btn-outline-primary">
+<p> <%= link_to ' Book Now', new_course_booking_path(@course) %> </p>
+</div>
+</div>
+
 </div>
 
 <body>
