@@ -1,4 +1,6 @@
+<div class="card-category">
 <h1>Course</h1>
+
 <%= @course.subject %>
 
 <div class="container mt-5">
@@ -6,3 +8,14 @@
 <p> <%= link_to ' Book Now', new_course_booking_path(@course) %> </p>
 </div>
 </div>
+
+</div>
+
+<body>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><%= @course.subject %></h5>
+    <p class="card-text"><%= @course.user_id %></p>
+  </div>
+</div>
+</body>
