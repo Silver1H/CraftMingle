@@ -1,3 +1,18 @@
+// .card-category {
+//   background-size: cover;
+//   background-position: center;
+//   height: 180px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: #bfcfff;
+//   font-size: 24px;
+//   font-weight: bold;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   border-radius: 5px;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+// }
+
 .card-category {
   background-size: cover;
   background-position: center;
@@ -5,13 +20,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #bfcfff;
+  color: white;
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 400px;
+  margin-bottom: 30px;
 }
+
+.card-category-course{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  align-items: center;
+  background-position: center;
+  width: 24rem;
+  height: 30rem;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  background-color: #bfcfff;
+}
+
 
 .card{
   background-color: #ffffff;
