@@ -12,8 +12,8 @@ Course.destroy_all
 User.destroy_all
 
 
-user1 = User.create!(email: 'test@email.com', password: '123456')
-user2 = User.create!(email: 'another_test@anotheremail.com', password: '123456')
+user1 = User.create!(email: 'test@email.com', nickname: 'user1', password: '123456')
+user2 = User.create!(email: 'another_test@anotheremail.com', nickname: 'user2', password: '123456')
 
 painting = Course.new(subject: 'Painting', background_image_url: "https://www.pictoclub.com/wp-content/uploads/2021/09/painting-brushes-2048x1365.jpg")
 pottery = Course.new(subject: 'Pottery', background_image_url: "https://media.istockphoto.com/id/639487044/photo/hands-of-a-potter-creating-an-earthen-jar.jpg?s=2048x2048&w=is&k=20&c=ltSwnfvo2FvRrgaOeHcE2GUJ4Y4AszFalt01BeUlMos=")
