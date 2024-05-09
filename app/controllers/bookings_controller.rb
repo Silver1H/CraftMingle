@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.course = @course
     @booking.user = current_user
     if @booking.save
-      redirect_to course_path(@course)
+      redirect_to course_booking_path(@course, @booking)
     else
       render :new, status: :unprocessable_entity
     end
@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    @course = Course.find(@booking.course_id)
   end
 
   private
