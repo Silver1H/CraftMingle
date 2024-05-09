@@ -1,18 +1,27 @@
 
-<div class="card-category-course" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @course.background_image_url %>)">
-  <div class="container mt-5">
-    <div class="title">
-      <%= @course.subject %>
+
+
+<div class= "d-flex align-item-start justify-content-between p-2 bd-highlight">
+
+  <div class="card-category-course" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @course.background_image_url %>)">
+    <div class="container mt-5">
+      <div class="title">
+        <%= @course.subject %>
+      </div>
     </div>
   </div>
-</div>
 
-<div type="button" class="btn btn-outline-primary">
-  <p><%= link_to ' Book Now', new_course_booking_path(@course) %> </p>
-</div>
 
-<div class="container mt-5">
-  <div type="button" class="btn btn-outline-primary">
-    <p><%= link_to ' back to Courses', courses_path %></p>
+  <div>
+
+    <div class= "card-category " >
+      <div type="button" class="btn btn-outline-primary">
+        <p><%= link_to ' Book Now', new_course_booking_path(@course) %> </p>
+      </div>
   </div>
+
+
+
+  </div>
+
 </div>
