@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "courses#index"
   resources :courses do
-    resources :bookings, only: [:new, :show, :create]
+    resources :bookings, only: [ :show, :create]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
