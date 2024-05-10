@@ -3,6 +3,9 @@ class CoursesController < ApplicationController
 
   def index
     @courses = Course.all
+    if params[:query].present?
+      @courses = Course.search_by_subject(params[:query])
+    end
   end
 
   def new
