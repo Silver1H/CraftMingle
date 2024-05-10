@@ -1,2 +1,30 @@
-<h1>Course</h1>
-<%= @course.subject %>
+<div class= "d-flex align-item-start justify-content-between p-2 bd-highlight">
+
+  <div class="card-category-course" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @course.background_image_url %>)">
+    <div class="container mt-5">
+      <div class="title">
+        <%= @course.subject %>
+      </div>
+    </div>
+  </div>
+
+
+  <div>
+
+     <div class= "card-category-booking" >
+      <div class="container mt-5" >
+            <h3> Choose Your Class Date</h3>
+      </div>
+
+
+      <div class="container mt-5" data-controller='datepicker'>
+        <%= simple_form_for [@course, @booking] do |f| %>
+          <input type="text" data-datepicker-target='input' data-action="change->datepicker#processDate">
+          <%= f.input :start_date, as: :string, input_html: { data: {datepicker_target: 'startDate'} }, wrapper_html: { class: "d-none"} %>
+          <%= f.input :end_date, as: :string, input_html: { data: {datepicker_target: 'endDate'} }, wrapper_html: { class: "d-none"}  %>
+          <%= f.submit class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+  </div>
+
+</div>

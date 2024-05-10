@@ -1,6 +1,11 @@
 class CoursesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @courses = Course.all
+    if params[:query].present?
+      @courses = Course.search_by_subject(params[:query])
+    end
   end
 
   def new
@@ -15,5 +20,6 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
+    @booking = Booking.new
   end
 end
