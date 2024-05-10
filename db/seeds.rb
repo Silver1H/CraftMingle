@@ -11,7 +11,6 @@ Booking.destroy_all
 Course.destroy_all
 User.destroy_all
 
-
 user1 = User.create!(email: 'test@email.com', nickname: 'John', password: '123456')
 user2 = User.create!(email: 'another_test@anotheremail.com', nickname: 'Anna', password: '123456')
 
@@ -22,18 +21,23 @@ wood_carving = Course.new(subject: 'Wood Carving', background_image_url: "https:
 carpentry = Course.new(subject: 'Carpentry', background_image_url: "https://images.squarespace-cdn.com/content/v1/5f4fdc32f4dacb6dc0cac51c/1620947771107-XEQTFXQ8PLUMWWYYF9OQ/carpentry+image.jpg?format=1500w")
 
 painting.user = user1
+painting.address = "2 Churchill Pl, London"
 painting.save
 
 pottery.user = user2
+pottery.address = "220 Stamford Hill, London"
 pottery.save
 
 cupcake_design.user = user2
+cupcake_design.address = "100 Fenchurch St, London"
 cupcake_design.save
 
 wood_carving.user = user1
+wood_carving.address = "120 Moorgate, London"
 wood_carving.save
 
 carpentry.user = user1
+carpentry.address = "138 Kingsland Rd, London"
 carpentry.save
 
 

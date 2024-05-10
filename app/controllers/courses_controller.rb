@@ -13,7 +13,10 @@ class CoursesController < ApplicationController
   end
 
   def create
-    current_user.courses.create!(subject: params['course']['subject'])
+    current_user.courses.create!(
+      subject: params['course']['subject'],
+      address: params['course']['address']
+    )
 
     redirect_to root_url
   end
@@ -21,5 +24,6 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @booking = Booking.new
+    @markers = [{ lat: @course.latitude, lng: @course.longitude }]
   end
 end

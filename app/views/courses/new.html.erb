@@ -4,6 +4,10 @@
     <%= form_for(:course, url: courses_path) do |f| %>
       <%= f.label 'Course subject:' %>
       <%= f.text_field :subject, class: "post-area form-control", autofocus: true %>
+
+      <%= f.label 'Course address:' %>
+      <%= f.text_field :address, class: "post-area form-control" %>
+
       <%= f.submit "Save Course", class: "btn btn-primary" %>
     <% end %>
   </div>
