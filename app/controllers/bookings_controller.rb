@@ -1,8 +1,4 @@
 class BookingsController < ApplicationController
-  def new
-    @course = Course.find(params[:course_id])
-    @booking = Booking.new
-  end
 
   def create
     @course = Course.find(params[:course_id])
@@ -24,6 +20,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
