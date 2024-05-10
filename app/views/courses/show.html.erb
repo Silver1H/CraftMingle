@@ -14,14 +14,20 @@
 
   <div>
 
-    <div class= "card-category " >
-      <div type="button" class="btn btn-outline-primary">
-        <p><%= link_to ' Book Now', new_course_booking_path(@course) %> </p>
+     <div class= "card-category-booking" >
+      <div class="container mt-5" >
+            <h3> Choose Your Class Date</h3>
       </div>
-  </div>
 
 
-
+      <div class="container mt-5" data-controller='datepicker'>
+        <%= simple_form_for [@course, @booking] do |f| %>
+          <input type="text" data-datepicker-target='input' data-action="change->datepicker#processDate">
+          <%= f.input :start_date, as: :string, input_html: { data: {datepicker_target: 'startDate'} }, wrapper_html: { class: "d-none"} %>
+          <%= f.input :end_date, as: :string, input_html: { data: {datepicker_target: 'endDate'} }, wrapper_html: { class: "d-none"}  %>
+          <%= f.submit class: 'btn btn-primary' %>
+        <% end %>
+      </div>
   </div>
 
 </div>

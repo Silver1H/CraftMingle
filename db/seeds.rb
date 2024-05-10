@@ -35,6 +35,8 @@ wood_carving.save
 
 carpentry.user = user1
 carpentry.save
+
+
 # #   end
 
 # Course.destroy_all
